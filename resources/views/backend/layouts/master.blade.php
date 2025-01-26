@@ -1,59 +1,67 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en" class="light scroll-smooth group" data-layout="vertical" data-sidebar="light" data-sidebar-size="lg"
+    data-mode="light" data-topbar="light" data-skin="default" data-navbar="sticky" data-content="fluid" dir="ltr">
+
 
 <head>
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Passion Institute | Admin </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta content="Minimal Admin & Dashboard Template" name="description">
+    <meta content="Themesdesign" name="author">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
+    <!-- Layout config Js -->
+    <script src="{{ asset('assets/js/layout.js') }}"></script>
+    <!-- Icons CSS -->
 
-    <title>Bits Nepalgunj</title>
+    <!-- Tailwind CSS -->
 
 
-    <!-- Site favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/frontend/img/static-image/logo.jpg') }}" />
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="{{ asset('assets/frontend/img/static-image/logo.jpg') }}" />
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="{{ asset('assets/frontend/img/static-image/logo.jpg') }}" />
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet" />
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/backend/vendors/styles/core.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/backend/vendors/styles/icon-font.min.css') }}" />
-
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/backend/vendors/styles/style.css') }}" />
-    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/43.1.0/ckeditor5.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/tailwind2.css') }}">
 </head>
 
-<body>
-    
-    @include('sweetalert::alert')
-    @include('backend.partials.header')
-    @include('backend.partials.sidebar')
+<body
+    class="text-base bg-body-bg text-body font-public dark:text-zink-100 dark:bg-zink-800 group-data-[skin=bordered]:bg-body-bordered group-data-[skin=bordered]:dark:bg-zink-700">
+    <div class="group-data-[sidebar-size=sm]:min-h-sm group-data-[sidebar-size=sm]:relative">
 
-    <div class="main-container">
-        <div class="pd-ltr-20">
 
+        @include('backend.partials.sidebar')
+        <!-- Left Sidebar End -->
+        <div id="sidebar-overlay" class="absolute inset-0 z-[1002] bg-slate-500/30 hidden"></div>
+
+        @include('backend.partials.header')
+
+      
+        <div class="relative min-h-screen group-data-[sidebar-size=sm]:min-h-sm">
             @yield('container')
+            <!-- End Page-content -->
+
             @include('backend.partials.footer')
         </div>
+
     </div>
-    @stack('script')
+    <!-- end main content -->
+@include('backend.partials.right-sidebar')
+    
+    <script src='assets/libs/choices.js/public/assets/scripts/choices.min.js'></script>
+    <script src="{{ asset('assets/libs/%40popperjs/core/umd/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/tippy.js/tippy-bundle.umd.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/prismjs/prism.js') }}"></script>
+    <script src="{{ asset('assets/libs/lucide/umd/lucide.js') }}"></script>
+    <script src="{{ asset('assets/js/tailwick.bundle.js') }}"></script>
+    <!--apexchart js-->
+    <script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
-    <!-- js -->
-    <script src="{{ asset('assets/backend/vendors/scripts/core.js') }}"></script>
-    <script src="{{ asset('assets/backend/vendors/scripts/script.min.js') }}"></script>
-    <script src="{{ asset('assets/backend/vendors/scripts/process.js') }}"></script>
-    <script src="{{ asset('assets/backend/vendors/scripts/layout-settings.js') }}"></script>
-    <script src="{{ asset('assets/backend/src/plugins/apexcharts/apexcharts.min.js') }}"></script>
+    <!--dashboard ecommerce init js-->
+    <script src="{{ asset('assets/js/pages/dashboards-ecommerce.init.js') }}"></script>
 
-    <script src="{{ asset('assets/backend/vendors/scripts/dashboard.js') }}"></script>
-    <script src="{{ asset('assets/backend/vendors/scripts/dashboard.js') }}"></script>
+    <!-- App js -->
+    <script src="{{ asset('assets/js/app.js') }}"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+
     <script>
         ClassicEditor
             .create(document.querySelector('#editor'), {
@@ -66,5 +74,7 @@
             });
     </script>
 </body>
+
+
 
 </html>
