@@ -2,9 +2,10 @@
 
 use App\Models\Gallery;
 use App\Models\Programme;
+use App\Models\Service;
+use App\Models\Slider;
 use App\Models\Student;
 use App\Models\SystemSetting;
-use App\Models\Teacher;
 use Illuminate\Support\Facades\Cache;
 
 
@@ -17,24 +18,17 @@ if (!function_exists('systemSetting')) {
         });
     }
 }
-if (!function_exists('student')) {
-    function student()
-    {
-        return Cache::rememberForever('student', function () {
-            return auth()->guard('student')->user();
-        });
-    }
-}
 
-if (!function_exists('galleries')) {
-    function galleries()
+
+if (!function_exists('sliders')) {
+    function sliders()
     {
-        return Gallery::with('files')->get();
+        return Slider::all();
     }
 }
-if (!function_exists('teachers')) {
-    function teachers()
+if (!function_exists('services')) {
+    function services()
     {
-        return Teacher::all();
+        return Service::all();
     }
 }

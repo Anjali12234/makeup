@@ -6,16 +6,16 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Passion Institute | Admin </title>
+    <title>Beauty Parlour | Admin </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta content="Minimal Admin & Dashboard Template" name="description">
     <meta content="Themesdesign" name="author">
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ systemSetting()?->logo2 }}">
     <!-- Layout config Js -->
     <script src="{{ asset('assets/js/layout.js') }}"></script>
     <!-- Icons CSS -->
-
+    @vite('resources/css/app.css')
     <!-- Tailwind CSS -->
 
 
@@ -25,7 +25,7 @@
 <body
     class="text-base bg-body-bg text-body font-public dark:text-zink-100 dark:bg-zink-800 group-data-[skin=bordered]:bg-body-bordered group-data-[skin=bordered]:dark:bg-zink-700">
     <div class="group-data-[sidebar-size=sm]:min-h-sm group-data-[sidebar-size=sm]:relative">
-
+        @include('sweetalert::alert')
 
         @include('backend.partials.sidebar')
         <!-- Left Sidebar End -->

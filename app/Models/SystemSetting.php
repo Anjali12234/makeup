@@ -13,7 +13,11 @@ class SystemSetting extends Model
 
     protected $fillable = [
         'logo1',
-        
+        'instagram_url',
+        'facebook_url',
+        'twitter_url',
+        'youtube_url',
+        'map_url',
         'name',
         'address',
         'phone_number',

@@ -13,7 +13,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->longText('description');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('video_url')->nullable();
             $table->string('slug')->nullable();
             $table->string('position');

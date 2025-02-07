@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\ServiceCategory;
+use App\ServiceType;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -16,11 +18,16 @@ class Service extends Model
     protected $fillable = [
         'title',
         'description',
-        'image',
+        'image',        
+        'price',        
+        'category',        
         'slug',
         'position',
     ];
-    
+    protected $casts = [
+        'category' => ServiceType::class,
+    ];
+   
     protected function image(): Attribute
     {
         return Attribute::make(
@@ -44,5 +51,10 @@ class Service extends Model
         static::creating(function ($service) {
             $service->position = static::max('position') + 1;
         });
+    }
+
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class);
     }
 }

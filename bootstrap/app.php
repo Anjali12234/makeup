@@ -15,10 +15,10 @@ return Application::configure(basePath: dirname(__DIR__))
             ->prefix('admin')
             ->name('admin.')
             ->group(base_path('routes/admin.php'));
-           Route::middleware(['web', 'auth:student'])
-           ->prefix('student')
-           ->name('student.')
-           ->group(base_path('routes/student.php'));
+           Route::middleware(['web', 'auth:customer'])
+           ->prefix('customer')
+           ->name('customer.')
+           ->group(base_path('routes/customer.php'));
            
         }
     )

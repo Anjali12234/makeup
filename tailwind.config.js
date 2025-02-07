@@ -9,15 +9,19 @@ export default {
         './resources/views/**/*.blade.php',
         'node_modules/preline/dist/*.js',
     ],
-
+    darkMode: 'class',
     theme: {
         extend: {
             fontFamily: {
                 // sans: ['Figtree', ...defaultTheme.fontFamily.sans],
                 popins:['Poppins 300','sens-serif'],
                 slabo:['Slabo ','sens-serif'],
-                lora:['Lora','serif']
+                lora:['Lora','serif'],
+                edu_au_vic_wa_nt_hand:['Edu AU VIC WA NT Hand',' serif']
             },
+            spacing: {
+                header: '4rem', // Set the desired spacing value
+              },
         },
     },
 

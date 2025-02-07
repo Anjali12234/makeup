@@ -22,7 +22,11 @@ class StoreSystemSettingRequest extends FormRequest
             'email' => ['required', 'email'],
             'logo1' => ['nullable', 'image'],
             'logo2' => ['nullable', 'image'],
-           
+            'map_url' => ['nullable'],
+            'instagram_url' => ['nullable', 'url'],
+            'facebook_url' => ['nullable', 'url'],
+            'youtube_url' => ['nullable', 'url'],
+            'twitter_url' => ['nullable', 'url'],
         ];
     }
 }

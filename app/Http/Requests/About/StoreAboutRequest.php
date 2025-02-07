@@ -16,8 +16,8 @@ class StoreAboutRequest extends FormRequest
     {
         return [
             'title' => ['required', 'string'],
-            'video_url' => ['nullable', 'url'],
-            'image' => ['required', 'image'],
+            'video_url' => ['required', 'string'],
+            'image' => ['nullable', 'image'],
             'description' => ['required'],
         ];
     }

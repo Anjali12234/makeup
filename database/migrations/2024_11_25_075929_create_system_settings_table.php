@@ -14,7 +14,11 @@ return new class extends Migration
         Schema::create('system_settings', function (Blueprint $table) {
             $table->id();
             $table->string('logo1')->nullable();
-           
+            $table->text('instagram_url')->nullable();
+            $table->text('facebook_url')->nullable();
+            $table->text('twitter_url')->nullable();
+            $table->text('youtube_url')->nullable();
+            $table->text('map_url')->nullable();
             $table->string('name');
             $table->string('address');
             $table->string('phone_number');
