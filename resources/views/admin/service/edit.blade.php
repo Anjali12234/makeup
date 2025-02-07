@@ -23,6 +23,7 @@
                         <div class="grid grid-cols-1 gap-x-5 md:grid-cols-2 xl:grid-cols-3">
                             <x-input-label : id="title" value="{{ old('title',$service->title) }}" title="Title"
                                 spanClass="text-red-500" type="text" />
+                                
                             <x-input-label : id="price" value="{{ old('price',$service->price) }}" title="Price"
                                 spanClass="text-red-500" type="text" />
 
