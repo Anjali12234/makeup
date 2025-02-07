@@ -28,6 +28,8 @@
 
                                 <img src="{{ $service?->image }}" alt="" class="h-20">
 
+                                <x-input-label : id="image" value="{{ old('image') }}" title="Image"
+                                spanClass="text-white" type="file" />
                                 <x-select 
                                 id="category" 
                                 selected="{{ old('category', $service->category?->value) }}" 

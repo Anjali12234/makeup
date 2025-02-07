@@ -115,7 +115,18 @@
                 @endif
             </ul>
         </div>
-
+        <form action="{{ route('search') }}" method="GET">
+            <input
+                class="py-3 ps-10 pe-4 block w-full border-gray-200 rounded-lg 
+            text-sm focus:border-blue-500 focus:ring-blue-500 
+            disabled:opacity-50 disabled:pointer-events-none 
+            dark:bg-neutral-900 dark:border-neutral-700 
+            dark:text-neutral-400 dark:placeholder-neutral-500 
+            dark:focus:ring-neutral-600"
+                name="query" type="text" role="combobox" aria-expanded="false"
+                placeholder="Search.." value="{{ request('query') }}"
+                data-hs-combo-box-input="">
+        </form>
         <div class='flex max-lg:ml-auto'>
             <button id="toggleOpen" class='lg:hidden'>
                 <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

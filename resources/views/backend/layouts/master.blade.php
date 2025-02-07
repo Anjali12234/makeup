@@ -53,15 +53,16 @@
     <script src="{{ asset('assets/libs/lucide/umd/lucide.js') }}"></script>
     <script src="{{ asset('assets/js/tailwick.bundle.js') }}"></script>
     <!--apexchart js-->
-    <script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
     <!--dashboard ecommerce init js-->
     <script src="{{ asset('assets/js/pages/dashboards-ecommerce.init.js') }}"></script>
-
+    <script src="{{ asset('assets/assets/libs/flatpickr/flatpickr.min.js')}}"></script>
     <!-- App js -->
+    <script src="{{ asset('assets/assets/libs/list.pagination.js/list.pagination.min.js')}}"></script>
+
     <script src="{{ asset('assets/js/app.js') }}"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
-
+    <script src="{{ asset('assets/js/pages/listjs.init.js')}}"></script>
     <script>
         ClassicEditor
             .create(document.querySelector('#editor'), {

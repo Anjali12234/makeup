@@ -4,6 +4,7 @@ use App\Http\Controllers\FileController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Customer\CustomerAuthController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,7 @@ Route::controller(CustomerAuthController::class)->group(function () {
     Route::post('customerLogin', 'customerLogin')->name('customerLogin');
     
 });
+Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 Route::post('upload', [UploadController::class, 'store'])->name('upload');
 
