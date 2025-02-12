@@ -4,17 +4,17 @@
         <!-- First Column - Logo & Description -->
         <div>
             <img src="{{ systemSetting()?->logo2 }}" alt="Logo" class="w-40 ">
-            <p class="text-white text-sm">Your company tagline or a short description goes here.</p>
+            <p class="text-white text-sm"></p>
         </div>
 
         <!-- Second Column - Services -->
         <div>
             <h3 class="text-xl font-semibold mb-3 font-popins">Services</h3>
             <ul class="text-white space-y-1 ">
-                <li><a href="#" class="hover:text-white text-sm">Web Development</a></li>
-                <li><a href="#" class="hover:text-white text-sm">SEO Optimization</a></li>
-                <li><a href="#" class="hover:text-white text-sm">Digital Marketing</a></li>
-                <li><a href="#" class="hover:text-white text-sm">Graphic Design</a></li>
+                <li><a href="#" class="hover:text-white text-sm">Nail Extension</a></li>
+                <li><a href="#" class="hover:text-white text-sm">eye lashes extension</a></li>
+                <li><a href="#" class="hover:textti-white text-sm">Hair Coloring</a></li>
+                <li><a href="#" class="hover:text-white text-sm">Product Sell</a></li>
             </ul>
         </div>
 

@@ -19,6 +19,7 @@ class BookingController extends Controller
     }
     public function store(StoreBookingRequest $request)
     {
+        dd( $request);
         $customerId = auth('customer')->id();
         Booking::create($request->validated()+ [
             'customer_id' => $customerId,

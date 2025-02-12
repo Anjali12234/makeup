@@ -92,7 +92,7 @@
                 <!-- View Product Button -->
                 <div class="mt-4">
                     <p class="font-lora text-base text-gray-600 hover:text-gray-800">
-                        Shadows Beauty Parlour seamlessly merges the realms of beauty and wellness, offering a sanctuary
+                        Sarinda.artistry seamlessly merges the realms of beauty and wellness, offering a sanctuary
                         where indulgence and self-care intertwine
                     </p>
 
@@ -172,7 +172,7 @@
                 <!-- View Product Button -->
                 <div class="mt-4">
                     <p class="font-lora text-base text-gray-600 hover:text-gray-800">
-                        Experience elegance at Shadows Beauty Parlour. Our personalized services enhance your unique
+                        Experience elegance at Sarinda.artistry. Our personalized services enhance your unique
                         beauty effortlessly, ensuring you radiate grace.
                     </p>
 

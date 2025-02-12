@@ -9,7 +9,7 @@
     </section>
 
     <div class='flex flex-wrap items-center justify-between gap-4 px-10 py-4  min-h-[70px] bg-pink-700'>
-        <a href="javascript:void(0)"><img src="{{ asset('assets/frontend/logo.png') }}" alt="logo" class='w-36' />
+        <a href="javascript:void(0)"><img src="{{ systemSetting()?->logo1 }}" alt="logo" class='w-36' />
         </a>
 
         <div id="collapseMenu"
@@ -95,14 +95,7 @@
                                     Book an appointment
                                 </a>
                             </li>
-                            <li class='border-b py-1'>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <button class='hover:text-purple-700 text-gray-600 text-[16px] font-medium block'>
-                                        Log Out
-                                    </button>
-                                </form>
-                            </li>
+                            
 
 
                         </ul>
