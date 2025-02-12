@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 Route::controller(FrontendController::class)->group(function () {
     Route::get('/', 'index')->name('welcome');
     Route::get('booking', 'booking')->name('booking');
+    Route::post('booking', 'bookingStore')->name('bookingStore');
     Route::get('service/category/{service:label}', 'serviceList')->name('serviceList');
     Route::get('service/{service:slug}','serviceDetail')->name('serviceDetail');
     

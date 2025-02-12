@@ -63,10 +63,7 @@ group-data-[layout=horizontal]:px-3 group-data-[layout=horizontal]:group-data-[n
                                         Status
                                     </th>
 
-                                    <th class="sort px-3.5 py-2.5 font-semibold border-b border-slate-200 dark:border-zink-500 ltr:text-left rtl:text-right"
-                                        data-sort="action">
-                                        Action
-                                    </th>
+                                  
                                 </tr>
                             </thead>
                             <tbody class="list form-check-all">
@@ -123,24 +120,7 @@ group-data-[layout=horizontal]:px-3 group-data-[layout=horizontal]:group-data-[n
                                                 </form>
                                             </div>
                                         </td>
-                                        <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500">
-                                            <div class="flex gap-2">
-
-                                                <div class="remove">
-                                                    <form action="{{ route('admin.booking.destroy', $booking) }}"
-                                                        method="post" style="display: inline">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button data-modal-target="deleteRecordModal" id="delete-record"
-                                                            type="submit"
-                                                            onclick="return confirm('Are You sure want to delete')"
-                                                            class="py-1 text-xs text-white bg-red-500 border-red-500 btn hover:text-white hover:bg-red-600 hover:border-red-600 focus:text-white focus:bg-red-600 focus:border-red-600 focus:ring focus:ring-red-100 active:text-white active:bg-red-600 active:border-red-600 active:ring active:ring-red-100 dark:ring-custom-400/20 remove-item-btn">
-                                                            Remove
-                                                        </button>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        
                                     </tr>
                                 @empty
                                     <tr>

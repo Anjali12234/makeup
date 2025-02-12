@@ -9,7 +9,7 @@
         <div class="text-2xl  py-4 px-6 bg-gray-900 text-white text-center font-bold uppercase">
             Book an Appointment
         </div>
-        <form class="py-4 px-6" action="{{route('admin.booking.store')}}" method="POST">
+        <form class="py-4 px-6" action="{{route('bookingStore')}}" method="POST">
             @csrf
             <x-input-error/>
             <div class="mb-4">

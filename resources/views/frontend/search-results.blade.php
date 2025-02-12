@@ -38,7 +38,7 @@
                                                 <p class="text-sm text-gray-600 mb-4">
                                                     {!! Str::limit($service->description, 100, '...') !!}</p>
                                                 <a href="
-                                                {{-- {{ route('productDetail', $product) }} --}}
+                                                {{route('serviceDetail',$service)}}
                                                  "
                                                     class="inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
                                                     View Details

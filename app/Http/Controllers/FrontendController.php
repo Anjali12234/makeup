@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Booking\StoreBookingRequest;
 use App\Models\About;
+use App\Models\Booking;
 use App\Models\Course;
 use App\Models\Gallery;
 use App\Models\GeneralQuestion;
@@ -43,6 +45,17 @@ class FrontendController extends Controller
         return view('frontend.serviceDetail', compact('service'));
     }
    
-    
+    public function bookingStore(StoreBookingRequest $request)
+    {
+        $customerId = auth('customer')->id();
+        Booking::create($request->validated()+ [
+            'customer_id' => $customerId,
+            
+        ]
+    );
+        Alert::success('Booking added successfully');
+        return redirect(route('welcome'));
+
+    }
   
 }
